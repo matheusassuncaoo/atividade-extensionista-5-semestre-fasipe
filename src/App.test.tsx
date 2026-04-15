@@ -2,15 +2,17 @@ import { describe, it, expect, vi, beforeAll } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
-// Mock do window.speechSynthesis e IntersectionObserver para o JSDOM (GSAP e Audio)
 beforeAll(() => {
-  global.window.speechSynthesis = {
-    cancel: vi.fn(),
-    speak: vi.fn(),
-    pause: vi.fn(),
-    resume: vi.fn(),
-    getVoices: vi.fn().mockReturnValue([]),
-  } as any;
+  Object.defineProperty(window, 'speechSynthesis', {
+    writable: true,
+    value: {
+      cancel: vi.fn(),
+      speak: vi.fn(),
+      pause: vi.fn(),
+      resume: vi.fn(),
+      getVoices: vi.fn().mockReturnValue([]),
+    }
+  });
   
   window.IntersectionObserver = vi.fn().mockImplementation(() => ({
       observe: () => null,
