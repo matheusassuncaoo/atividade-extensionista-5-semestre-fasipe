@@ -17,15 +17,19 @@ export default function App() {
             Uma jornada guiada pelas memórias e heranças indígenas e negras que construíram a nossa Mato Grosso profunda.
           </p>
           
-          <div className="mt-20">
-            <span className="text-xl md:text-2xl font-bold uppercase tracking-widest block mb-4 text-[#C05A16]">
+          <div className="mt-16">
+            <p className="text-xl md:text-2xl font-bold uppercase tracking-widest block text-[#C05A16] mb-4">
               Comece a rolar a tela para baixo
-            </span>
-            <div className="inline-block p-4 bg-white rounded-full shadow-md animate-bounce border-2 border-[#EAE4D9]">
+            </p>
+            <div className="inline-block p-4 bg-white rounded-full shadow-md animate-bounce border-2 border-[#EAE4D9] mb-8">
               <svg className="w-10 h-10 text-[#C05A16]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
               </svg>
             </div>
+            
+            <p className="text-sm font-medium text-gray-500 max-w-sm mx-auto bg-gray-100 p-3 rounded-lg">
+              Nota: Nossa história contém narração automática. Clique no botão de voz nos cards caso o som seja bloqueado nas suas configurações.
+            </p>
           </div>
         </header>
 

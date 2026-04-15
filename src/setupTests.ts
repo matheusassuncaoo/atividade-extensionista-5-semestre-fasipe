@@ -16,4 +16,6 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 window.HTMLElement.prototype.scrollIntoView = vi.fn();
+window.HTMLMediaElement.prototype.play = vi.fn().mockResolvedValue(undefined);
+window.HTMLMediaElement.prototype.pause = vi.fn();
 
