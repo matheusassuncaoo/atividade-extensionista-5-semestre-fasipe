@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    /* Fundo creme de alto contraste para não cansar as vistas */
+    background-color: #FAF7F2;
+    color: #111827; /* gray-900 */
+  }
+}
